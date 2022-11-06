@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my birth year</title>
+    <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="all">
+        <h1>Birth Year Calculator</h1>
+        <label class="prompt"> Enter Your Age:
+            <input required id="inputValue" type="text" placeholder="Ex: 18">
+        </label>
+        <section class="section">
+            <button id="enter" type="button" onclick="myBirthYear()">Enter</button>
+            <p>Your Birth Year:</p>
+            <p id="birthYear"> </p>
+            <button id="refresh" onclick="window.location.reload();">Refresh</button>
+        </section>
+    </div>
+
+    <script>
+        function myBirthYear() {
+            let num = document.getElementById("inputValue").value;
+            if (num > 0) {
+                let birthYear = 2022 - num;
+                document.getElementById("birthYear").innerHTML = birthYear;
+            }
+            else {
+                alert("Please Enter a Valid Number!")
+            }
+        }
+    </script>
+</body>
+
+</html>
